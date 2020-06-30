@@ -6,10 +6,12 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-
+dockerpath=anadersalem/mlms-docker-pro:latest
 # Step 2:  
-# Authenticate & tag
+# Authenticate & tagA
+docker login --username anadersalem
+docker tag mlms-docker-pro:latest
 echo "Docker ID and Image: $dockerpath"
-
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath
